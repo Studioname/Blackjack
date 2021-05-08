@@ -20,15 +20,17 @@ As it is, I didn't want to rewrite a working program in order to shoehorn them i
 The score reporting is still incredibly hacky. Code in question:
 
     #tab is there to help the player distinguish between menu commands and game text [game text is indented]
+    
     player_cards = "  Your cards are : "
     
+    #adds card value and a space onto the end of player_cards for each card in hand
+    
     for card in player_hand:
-      #adds card value and a space onto the end of player_cards for each card in hand
       player_cards += str(card) + " "
       
     #the exercise required score reporting for each card the player drew, so score updates accordingly
+    
     player_score_is = (f"and your score is {get_score(player_hand)}")
-    #prints player card string and their score
     print(player_cards + player_score_is)
     
 It's not too bad all things considered. But it is hacky. I'm kind of happy with the way the program turned out, it was accomplished one step above the 'expert difficulty' [with no reference whatsoever to the exercise hints] so while it is true that dicts are tacked on, I had no reference to go by except what I'd learned in GML previously. Granted my experience does include a survival solitaire card game engine 🤔 with animations, a deck, discard pile, library of different cards... I should probably go back to it sometime
